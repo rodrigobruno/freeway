@@ -1,18 +1,25 @@
-const wCanva = 600;
+const wCanva = 500;
 const hCanva = 400;
 
-function preload() {
-
-}
-
 function setup() {
-
     createCanvas(wCanva, hCanva);
-
+    somDaTrilha.loop();
+    somDaTrilha.setVolume(0.1);
 }
 
 function draw() {
 
-    background(0);
+    background(imagemDaEstrada);
+
+    mostraAtor();
+    movimentaAtor();
+    verificaColisao();
+
+    mostraCarro();
+    movimentaCarro();
+    voltaPosicaoInicialCarro();
+
+    mostrarPontos();
+    marcaPontos();
 
 }
